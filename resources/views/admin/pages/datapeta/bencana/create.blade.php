@@ -14,25 +14,16 @@
                                  <form action="/admin/datapeta/bencana" method="post" enctype="multipart/form-data">
                                  @csrf
                                     <div class="form-group">
-                                         <label for="latitude">Latitude</label>
-                                        <input type="text" name="latitude" class="form-control @error('latitude') is-invalid @enderror" id="latitude" placeholder="latitude" autofocus value="{{ old('latitude') }}">
+                                         <label for="longlat">LongLat</label>
+                                        <input type="text" name="longlat" class="form-control @error('longlat') is-invalid @enderror" id="longlat" placeholder="longlat" autofocus value="{{ old('longlat') }}">
                                         <div class="invalid-feedback">
-                                            @error('latitude')
+                                            @error('longlat')
                                                 {{ $message }}
                                             @enderror
                                         </div>
                                         </div>
                                    
-                                    <div class="form-group">
-                                         <label for="longitude">Longitude</label>
-                                        <input type="text" name="longitude" class="form-control @error('longitude') is-invalid @enderror" id="longitude" placeholder="longitude" autofocus value="{{ old('longitude') }}">
-                                        <div class="invalid-feedback">
-                                            @error('longitude')
-                                                {{ $message }}
-                                            @enderror
-                                        </div>
-                                        </div>
-                                        
+                        
                                         <div class="form-group">
                                             <label for="banjir">banjir</label>
                                            <input type="text" name="banjir" class="form-control @error('banjir') is-invalid @enderror" id="banjir" placeholder="banjir" autofocus value="{{ old('banjir') }}">
@@ -74,7 +65,7 @@
                                            </div>
 
                                            <div class="form-group">
-                                            <label for="longsor">Puting Beliung</label>
+                                            <label for="longsor">Longsor</label>
                                            <input type="text" name="longsor" class="form-control @error('longsor') is-invalid @enderror" id="longsor" placeholder="longsor" autofocus value="{{ old('longsor') }}">
                                            <div class="invalid-feedback">
                                                @error('longsor')

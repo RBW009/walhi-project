@@ -21,8 +21,12 @@
                                     <thead>
                                         <tr>
                                             <th>No.</th>
-                                            <th>Wilayah</th>
-                                            <th>Bencana</th>
+                                            <th>Koordinatnya</th>
+                                            <th>banjir</th>
+                                            <th>gempa</th>
+                                            <th>kebakaran</th>
+                                            <th>Puting Beliung</th>
+                                            <th>longsor</th>
                                             <th>Action</th>
                                             </tr>
                                     </thead>
@@ -30,8 +34,13 @@
                                     @foreach ( $bencana as $b )
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
-                                            <td>{{ $b->wilayah }}</td>
-                                            <td>{{  $b->bencana }}</td>
+                                            <td>{{ $b->longlat }}</td>
+                                            <td>{{  $b->banjir }}</td>
+                                            <td>{{ $b->gempa }}</td>
+                                            <td>{{  $b->kebakaran }}</td>
+                                            <td>{{ $b->puting_beliung }}</td>
+                                            <td>{{  $b->longsor }}</td>
+                                            
                                             <td>
                                            <a href="/admin/datapeta/bencana/{{ $b->id }}/edit" class="btn btn-warning "><i class="fa-solid fa-pen-to-square"></i></a>
                                             <form action="/admin/datapeta/bencana/{{ $b->id }}" method="post" class="d-inline">

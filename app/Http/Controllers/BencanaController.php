@@ -42,8 +42,7 @@ class BencanaController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'latitude' => ['required','max:255'],
-            'longitude' => ['required', 'max:255'],
+            'longlat' => ['required','max:255'],
             'banjir' => ['required','max:255'],
             'gempa' => ['required', 'max:255'],
             'kebakaran' =>  ['required', 'max:255'],
@@ -90,8 +89,12 @@ class BencanaController extends Controller
     public function update(Request $request, Bencana $bencana)
     {
         $validatedData = $request->validate([
-            'wilayah' => 'required|max:255',
-            'bencana' => 'required|max:255',
+            'longlat' => ['required','max:255'],
+            'banjir' => ['required','max:255'],
+            'gempa' => ['required', 'max:255'],
+            'kebakaran' =>  ['required', 'max:255'],
+            'puting_beliung' => ['required','max:255'],
+            'longsor' => ['required','max:255']
         ]);
 
       

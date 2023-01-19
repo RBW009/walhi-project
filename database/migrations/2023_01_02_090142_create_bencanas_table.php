@@ -15,8 +15,7 @@ return new class extends Migration
     {
         Schema::create('bencanas', function (Blueprint $table) {
             $table->id();
-            $table->String('latitude');
-            $table->string('longitude');
+            $table->String('longlat');
             // $table->string('wilayah');
             // $table->string('bencana');
             $table->string('banjir');
